@@ -36,11 +36,11 @@ function Home() {
     handleFetch()
   }, [])
 
-  localStorage.setItem('compra', cart)
+  localStorage.setItem('compra', JSON.stringify(cart))
 
   return (
     <div>
-      <Nav size={cart.length} />
+      <Nav size={cart.length} ></Nav>
       <div className="produtos">
         {fruits.map(fruit => (
           <Product key={fruit.id} fruit={fruit} handleClick={handleClick} />
