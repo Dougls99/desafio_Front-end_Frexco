@@ -1,25 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-function Cart({ cart, setCart, handleChange}) {
-  const handleRemove = id => {
-    const arr = cart.filter((fruits) => fruits.id !== id);
-    setCart(arr);
-  }
-  
+function Cart({ cart }) {
+  const compras = localStorage.getItem('compra')
+
   console.log(cart)
   return (
-    <article>
-        <div>
-          <button onClick={() => handleChange()}>+</button>
-          <button></button>
-          <button onClick={() => handleChange()}>-</button>
-        </div>
-        <div>
-          <button onClick={() => handleRemove()}>Remove</button>
-        </div>
-  
-  </article>
+    <>
+      <div>
+        <h1>Voltar</h1>
+      </div>
+      <div>
+        <button>+</button>
+        <h1>{compras}</h1>
+        <button>-</button>
+      </div>
+      <div>
+        <button>Remove</button>
+      </div>
+    </>
   )
 }
 
