@@ -1,0 +1,7 @@
+.fruta {
+  display: flex;
+  padding: 1em;
+  margin: 1.5em;
+  width: 30em;
+  justify-content: space-between;
+}
